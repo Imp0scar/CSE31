@@ -1,0 +1,27 @@
+
+int odd, even, average, input,;
+
+while (input != 0)
+		if( input == 1){
+		printf(" %d st")}
+		if( input == 2){
+		printf("%d nd")}	
+		if( input == 3){
+		printf("%d rd")}	
+		if( input == 4){
+		printf("%d th")} etc	
+
+		//keep asking for the user to input a number and identify whether its even or odd
+
+		if (total % 2 == 0) {
+			// its even
+		}
+		if (total % 2 == 0) {
+			// its odd
+		}
+
+		even_avg = even / count;
+		odd_avg = odd / count;
+
+		printf("%d", even_avg)
+		printf("%d", odd_avg)

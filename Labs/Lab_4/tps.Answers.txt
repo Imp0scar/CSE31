@@ -1,0 +1,74 @@
+TPS 1:
+
+1.) it should print the integer 2 
+
+2.) it should print the hex number format for the integer 2
+
+3.) printf("%x\n", four_ints[0]);
+
+4.) printf("%x\n", four_ints[1]); it prints out 2 before the for loop and 2 after the for loop so it didnt get changed into hex format and I dont see why.
+
+5.) 
+	a.)There should be two, the array four_int[4] and char* four_c.
+
+	b.) I think four_ints and four_c are pointing to the same location
+
+	c.)  After the for loop they are pointing to the same place 
+		printf("%p\n", four_ints);
+    	printf("%p\n", four_c);
+
+6.) 
+	for (i = 0; i < 4; i++)
+		printf("adress: %p, Value (hex): %x\n", &four_ints[i], *four_ints[i]);
+
+	There is a 4 byte different between the adresses because four_C is pointing to four_ints and an int is 4 bytes.
+
+
+7.)
+
+8.) 
+	for (i = 0; i < 4; i++){
+		printf("adress: %p, Value (hex): %x\n", &four_c[i], four_c[i]);
+	}
+
+	there is a 1 byte difference between the adresses because a char is 1 byte.
+
+9.)
+
+10.)
+
+
+TPS 2:
+
+1.) line 8 makes a 2-d array which is multiple rows of 1-d arrays.
+
+2.) we can access the ith value of the array by using a for loop.
+
+3.) for (int i = 0; i < n; i++){
+	arr[i] = (int *)malloc(n * sizeof(int*));
+}
+
+	for (int i = 0; i < n; i++){
+		for(j = 0; j < n; j++){
+			arr[i][j] = 0;
+		}
+	}
+
+4.) We need to pass size as an argument because we need to know how big the array is in order to print out every element.
+		
+5.)	
+	void printArray(int ** array, int size) {
+    // (5) Implement your printArr here:
+	for (int i = 0; i < size; i++){
+		for(int j = 0; j < size; j++){
+			printf("%d ", array[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+6.)
+	for (int i = 0; i < n; i++){
+			arr[i][i] = i+1;
+		
+	}

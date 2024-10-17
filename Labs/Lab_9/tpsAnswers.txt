@@ -1,0 +1,65 @@
+TPS 1
+
+	1.)
+
+	2.)
+
+	3.)
+
+	4.) A machine instruction contains 32 bits
+
+	5.) There are 3 types, they are I-format, R-format, and J-format
+
+	6.) 
+
+		a.)
+			The addi instruction is an i-format where it has 4 fields, the first is the opcode(6 bits), the second is the rs(source register/ 5 bits), the third is the rt(target register/ 5 bits) and finally the immediate which is 16 bits, this sums up to the 32 bits 
+
+		b.)
+			The value of the opcode in hex is 0x8, the register in rs would be $zero which in hex is 0x0. The register in rt would be $s0 and the value in hex is 0x10
+
+		c.)
+			binary: 0010 0000 0001 0000 0000 0000 0001 1001
+			0x20100019
+	7.)
+		a.)
+			the machine code at this address in hex is 0x0230402a.
+			In binaray its 0000 0010 0011 0000 0100 0000 0010 1010.
+		b.)
+			The instruction type is R format because the first 6 bits are 0 in hex and I know this is slt because the last two bits are 2a which I saw in the mips reference sheet to be slt. There are 6 fields.
+			1.) opcode - 6 bits
+			2.) rs - 5 bits
+			3.) rt - 5 bits
+			4.) rd(destination register) - 5 bits
+			5.) shamt - 5 bits
+			6.) funct - 6 bits
+		c.)
+			According to the binary version of this machine code the value of each field in hex would be 
+			opcode rs   rt   rd   shamt   funct
+			0x0    17   16   8      0       2a
+		d.)
+			This instruction is slt and the mappings of registers would be 
+			slt $t0, $s1, $s0
+		e.) the final mips instructions is slt $t0, $s1, $s0 which matches what I got.
+	8.)
+		a.) this is an I format.
+		b.) the value of opcode is 0x5, rs is 0x8, rt is 0x0 in hex.
+		c.)The name of the target label is Less if it takes the branch and the address of this label is 0x1 in hex.
+		d.)we just convert hex to binary and have 15 bits which are 0 with 1 bit at the end being 1.
+		e.) the immediate field value is 1 because it is 1 instruction starting from the 1st instruction below bne to get to the Label Less.
+		f.) the machine code of this instruction in binary is 
+		0001 0101 0000 0000 0000 0000 0000 0001
+		in hex format its:
+		0x15000001 which matches the code column.
+
+	9.)
+		a.)the j instruction is of j format, there are two fields.
+		b.)the opcode of this instruction is 2 hex or 0x2.
+		c.)The label it jumps to is Greq and its address is 0x00400030
+		d.) we look at the lowest 26 bits in the address and shift by 2. the value of the address field in binary is 00 0001 0000 0000 0000 0000 1100
+		e.)the machine code this instruction in binary is:
+		0000 1000 0001 0000 0000 0000 0000 1100
+		which in hex format is:
+		0x0810000c.
+
+

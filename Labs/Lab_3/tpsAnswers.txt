@@ -1,0 +1,39 @@
+TPS 1
+
+1.) the 3 pools for memory are the stack, the heap, and static memory. 
+	- static variables have global variable storage, the stack has local variable storage, and the heap has dynamic storage.
+
+2.)
+	a.) 3 variables are declared.
+	b.) 2 of them are pointers. ptr points to num, handles points to ptr,
+	c.) ptr and handle has malloc so it goes in the heap, num is declared in main function so it goes in the stack. *ptr points to the int num that is in the stack. *handle points to pointer ptr which points to num in the stack.
+	d.) it'll point to an array that is in the heap.
+
+3.)
+
+4.)
+
+
+
+TPS 2
+
+1.) This is a struct called Node that has the head pointing to the start of an array.
+
+2.) printf("value of head: %p\n", head);
+	printf("adress of head: %p\n", &head);
+	printf("adress of iValue: %p\n", &head->iValue);
+	printf("adress of fValue: %p\n", &head->fValue);
+	printf("adress of head->next: %p\n", &head->next);
+	
+
+3.) structures are stored in memory in the order they are declared and if necessary padding is added between the struct members. int and float are both 4 bytes so no padding is necessary and thus is goes up by 4 bytes for every adress called. The pointer head points to the first element in the destination struct.
+
+
+Individual Assignment 1: Arrays and pointers
+
+1.) 
+	a.) We need to pass the size of the array to the function so we can know how big the array is and can thus iterate through it.
+
+	b.) The original array shouldnt be changed we simply copy the elements in the array the user input into the sorted array, so it shouldnt change.
+
+	c.) If i had to say I think its because we created array to be a malloc so we cant update it and thus have to store it in another array.

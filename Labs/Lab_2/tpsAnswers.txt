@@ -1,0 +1,94 @@
+TPS activity 1:
+1.) 
+Jet Lin jlin276@ucmerced.edu
+Hans Guillen hguillen@ucmerced.edu
+
+2.)
+a.)https://www.geeksforgeeks.org/gdb-step-by-step-introduction/
+b.)https://cs.baylor.edu/~donahoo/tools/gdb/tutorial.html
+c.)https://www.youtube.com/watch?v=BoB-4O3ZyhQ&t=182s
+
+TPS 2
+
+activity 2:
+1.) I compile punishment .c so that i can debug it using 
+gcc -g -o punish punishment .c
+
+2.)  i load punishment.c in gdb using 
+gdb ./punish
+
+3.) i run it using the command
+run
+
+4.) 
+a.)breakpoints force your program to stop running when it reaches a certain point/line in the program.
+
+b.) You can set a break point by doing the command
+break (or b)
+
+c.) b 34
+
+5.) I run the program line by line using the 
+next ( or n) command
+
+6.) i would print the variable using 
+p "variable name"
+example: 
+p x
+x = 1
+
+7.) to run after using next you would do the 
+continue or c command.
+
+8.) you exit from GDB using the command 
+quit
+
+TPS 3
+
+Activity 3:
+1.) there are 5 variables declared in main and 3 of them are pointers.
+
+2.) the values of x is 16777216 and y is 257. arr[0] would be 2
+
+3.) You can prevent them from having unexpected values by setting them equal to a fixed value if they already arent.
+
+4.)
+printf("%p\n", &x);
+printf("%p\n", &y);
+
+5.) 
+px = &x;
+py = &y;
+printf("%p\n", &x);
+printf("%p\n", px);
+printf("%d\n", &y);
+printf("%p\n", py);
+
+6.) int arr[10];
+
+  for (i = 0; i < 10; ++i) *(arr + i) = 2 * i;
+  int *p = arr;
+    printf("elements of p[] and their adresses: \n");
+for (i = 0; i < 10; ++i) printf("%d @ %p\n", *(p + i), (p + i));
+    printf("\n");
+
+7.)
+    printf("%p\n", &arr[0]);
+elements of p[] and their adresses:
+0 @ 0x7ffc11b615f0
+2 @ 0x7ffc11b615f4
+4 @ 0x7ffc11b615f8
+6 @ 0x7ffc11b615fc
+8 @ 0x7ffc11b61600
+10 @ 0x7ffc11b61604
+12 @ 0x7ffc11b61608
+14 @ 0x7ffc11b6160c
+16 @ 0x7ffc11b61610
+18 @ 0x7ffc11b61614
+
+0x7ffc11b615f0
+
+
+8.) The result does make sense because pointers and arrays are very similar.
+
+

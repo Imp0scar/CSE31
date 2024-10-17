@@ -1,0 +1,91 @@
+Line #7 addi $s0, $zero, -15
+I format
+opcode	rs	rt	immediate
+0x8		0x0	 0x10	1.....100001 (twos complement)
+
+opcode	rs	rt	immediate
+001000 00000 10000 1111 1111 1111 0001 
+0x2010fff1
+
+Convert back to mips instruction:
+0x2010fff1
+1.) look at opcode = 001000 = 8 hex = addi instruction using mips reference sheet = i format
+2.) 
+opcode	rs	rt	immediate
+001000 00000 10000 1111 1111 1111 0001 
+0x8		0x0	 0x10	1.....100001 (twos complement)
+
+addi rt, rs, immediate
+addi $s0, $zero, -15
+
+
+
+Line #14 slt $t0, $s0, $s1
+R format
+opcode	rs		rt		rd		shamt		funct
+0x0		0x10	 0x11	0x8		0x0 		  0x2a
+
+opcode	rs		rt		rd		shamt		funct
+000000 10000 10001 		01000 	 00000 		 0010 1010 
+0x0211402a
+
+Convert back to mips instruction:
+0x0211402a
+1.) opcode = 000000 = 0 hex = R format
+last 2 bits are 2a indicating its slt
+
+opcode	rs		rt		rd		shamt		funct
+000000 10000 10001 		01000 	 00000 		 0010 1010 
+0x0 		0x10   0x11     0x8         0x0 		2  a
+slt rd, rs, rt
+slt $t0, $s0, $s1
+
+
+Line #17 beq $t0, $zero, LEEQ
+
+I format
+opcode	rs		rt		immediate
+0x4		0x8	 	0x0		0x6
+
+opcode	rs		rt		immediate
+000100 01000 	00000 	0000 0000 0000 0110
+0x11000006
+
+Convert back to mips instruction:
+0x11000006
+1.) opcode = 000100 = 4 hex = I format = beq
+
+opcode	rs		rt		immediate
+000100 01000 	00000 	0000 0000 0000 0110
+0x4		0x8	 	0x0		0x6
+
+beq rs, rt, Label
+
+beq $t0, $zero, LEEQ
+
+Line #20 J GRT
+
+J format
+opcode	address
+0x2		 0x0040001c
+
+opcode	address
+000010 		0000 0000 0100 0000 0000 0000 0001 1100
+=
+0000 1000 0001 0000 0000 0000 0000 0111
+0x08100007
+
+Convert back to mips instruction:
+0x08100007
+1.) opcode = 000010 = 2 hex = J format = J instruction
+
+opcode	address
+000010 	00 0001 0000 0000 0000 0000 0111
+= 
+000010 		0000 0000 0100 0000 0000 0000 0001 1100
+(shifted left by 2 and added 4 highest bits which are 0)
+= 0x0040001c
+
+J address(0x0040001c)
+
+J GRT

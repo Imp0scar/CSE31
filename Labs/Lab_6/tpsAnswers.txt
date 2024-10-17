@@ -1,0 +1,86 @@
+TPS 1
+
+	1.) The starting adresse of the text segment is (0x400000) and the starting adress of the data segment is 0x10010000
+
+	2.) From what I can tell the difference between source and basic in relation with the machine code is that source uses the registers name and basic uses the registers number when performing operations.
+
+	3.) There is a difference of 4 bytes between 2 adress locations.
+
+	4.) For each address location we have 16 columns.
+
+	5.)  The relationship between the address difference and the number of columns at each address location is that 
+
+	6.) from the source code you can create a new variable m and set it equal to 20 by first
+		la $t4, m
+		lw $t4, 0,($t4)
+
+		assuming m = 20 in the edit file.
+
+	7.) M is stored at the address 0x10010004
+
+	8.) we can declare a string named str 1 and set it equal to 'I love CSE31' by doing this in the edit tab.
+		str1: .asciiz "I love CSE31!"	
+
+	9.) Str1 is stored in addresses 0x10010008, 0x10010012, and 0x100100016.
+
+	10.) I do believe that the display of characters "I love CSE31!" is displayed in this manner of right to left in one adress and moving to the next address.
+
+	11.) You can print out a string called str1 by doing:
+		li      $v0, 4       # code 4 == print string
+		la      $a0, str1  # $a0 == address of the string
+		syscall             # Ask the operating system to 
+                    		    # perform the service.
+
+     12.) la $t3, n would load the address of n to the register $t3. The value stored in $t3 will be 13 since n = 13.
+
+
+     TPS 2
+
+     	1.)
+     	2.) n:	.word 25
+
+     	3.)
+     		str1: .asciiz "Less than\n"
+			str2: .asciiz "Less than or equal to\n"
+			str3: .asciiz "Greater than\n"
+			str4: .asciiz "Greater than or equal to\n"
+
+     	4.)	
+     		li 	$v0, 5		# get the users input
+			syscall
+
+     	5.) blt	$t0, $t1, LessThan
+     	LessThan: 
+		li      $v0, 4       # code 4 == print string
+		la      $a0, str1  # $a0 == address of the string
+		syscall
+		j 	end
+
+     	6.)	
+     	bge 	$t0, $t1, GreaterThanOrEqual
+     	GreaterThanOrEqual: 
+		li      $v0, 4       # code 4 == print string
+		la      $a0, str4  # $a0 == address of the string
+		syscall
+		j 	end
+
+     	7.)
+     		bgt 	$t0, $t1, GreaterThan
+     	GreaterThan: 
+		li      $v0, 4       # code 4 == print string
+		la      $a0, str3  # $a0 == address of the string
+		syscall
+		j 	end
+
+     	8.)
+     		ble 	$t0, $t1, LessThanOrEqual
+     	LessThanOrEqual: 
+		li      $v0, 4       # code 4 == print string
+		la      $a0, str2  # $a0 == address of the string
+		syscall
+		j 	end
+
+
+
+
+

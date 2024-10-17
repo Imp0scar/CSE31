@@ -1,0 +1,62 @@
+TPS 1
+
+	1.) Cache is a copy of a subset of main memory and we need it because the processor and memory speed mismatch so we need a new level.
+
+	2.)
+
+	3.)
+
+	4.) We need 4 bits for the offset because it would be 2^4 = 16 bytes. A set contains 32 bits. It isnt practical to have a cache of block size = 1 byte because there are going to be a lot of misses.
+
+	5.) Given there are 64 blocks in a cache we would need 4 index bits. the number of bits in index as afunction of number of blocks would be 2^6.
+
+	6.) Once you know the number of blocks and the block size of a cache you do know the total size of the cache because you can multiply them together to get the total size of the cache.
+
+	7.) the left over bits from the address are important because we use them as tags to identify whether we get hits or misses by checking to see if the bits match.
+
+	8.)
+		a.) this main memory would be 2^20 which is 1048576 kb or 1 Mb
+
+		b.) There would be 2^3 = 8 B block size so we need 3 offset bits.
+
+		c.) Number of blocks in cache = cache size/block size
+		So there are  128 / 8 = 16 blocks in the cache
+
+		d.) There would be 4 index bits because 2^4 = 16 blocks
+
+		e.) There would be 13 tag bits because 20 - (4 + 3) = 13
+
+		f.)
+
+		g.)
+
+
+
+TPS 2
+	
+	1.) The disadvantage of a Direct mapped cache is that only one block from a given group can be present in the cache at any given time.
+
+	2.)
+
+	3.) Given a cache with 1024 blocks and the associativity is 4 (4 blocks per set), how many index bits do we need? 	What is the number of bits in index as a function of number of blocks and associativity?
+
+	- Number of sets = Number of blocks/associativity = 1024 / 4 = 256
+	- So We would need 8 index bits because 2^8 = 256
+
+	4.)
+		a.) The main memory would be 2^20 = 1048576 * 2 = 2 MB
+
+		b.) There would be 3 offset bits because 2^3 = 8 B block size
+
+		c.) Cache size / block size 
+		- There are 16 blocks in the cache because 128 B / 8 B = 16 blocks
+
+		d.) There are 8 sets in the cache because 16 blocks / 2 associativity = 8 sets
+
+		e.) There would be 3 index bits because 2^3 = 8 B block size
+
+		f.) There are 14 tag bits because 20 - (3 + 3) = 14
+
+		g.)
+
+		h.)

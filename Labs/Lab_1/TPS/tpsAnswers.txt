@@ -1,0 +1,48 @@
+TPS 1
+Partners:
+1.) 
+Jet Lin jlin276@ucmerced.edu
+Hans Guillen hguillen@ucmerced.edu
+
+2.)
+https://ubuntu.com/tutorials/command-line-for-beginners#6-a-bit-of-plumbing
+https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
+https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+
+1) (Linux Command Cheat Sheet) https://phoenixnap.com/kb/linux-commands-cheat-sheet 
+2) (Intro to Linux) https://www.youtube.com/watch?v=IVquJh3DXUA 
+3) (Ubuntu Command Line for Beginners) https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+
+TPS 2
+1a.) You can open more than one terminal from your linux computer.
+1b.) I think that its more efficent and you can multi task several different programs of code without having to move everytime.
+
+2.) You can tell what the contents are inside the current directory by using the command ls
+
+3.) You can navigate to your desktop directory by using the command cd ~.
+
+4.) You would do mkdir CSE31.
+
+TPS 3
+1.)
+https://www.geeksforgeeks.org/gcc-command-in-linux-with-examples/
+https://www.educba.com/gcc-command-in-linux/
+
+2.)
+(how to install and use gcc, in video) https://www.youtube.com/watch?v=oLjN6jAg-sY
+
+3.) you would type gcc main.c
+
+4.) you would know it compiled successfully if you dont get an error.
+
+5.) the -c flag allows gcc to compile.
+
+6.)	the -g flag allows gcc to debug.
+
+7.) you can change the name from main to cselab1 by doing the command:
+mv main cselab1
+
+8.)	If you only compile with gcc main.c then you won't be able to output the results of your code.
+
+9.) In order to run the program you would do gcc -o out main.c
+

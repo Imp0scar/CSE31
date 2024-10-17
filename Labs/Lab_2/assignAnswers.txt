@@ -1,0 +1,21 @@
+Assignment 1:
+
+1.) I think that line 22 caused the segmentation fault because it couldnt scanf the input.
+2.) I would fix it by changing input to &input
+3.) The bug is that the sum is not getting updated in main and thus is equal to 0.
+4.) I would fix it by making the double sum a pointer and I would return the adress of sum for the values and for the actual sum just the variable sum.
+
+
+Assignment 2:
+
+1.) The output is not what was expected. I got HELLO!hello!llo! when it should be HELLO!hello!
+
+2.) The output is also not expected it should be HI!hi! but I got HI!hi!hellhi!. The bug here is that while it does output s1 and s2 appended it also appends s2 from the previous output combined with s2 from the most recent output.
+
+3.) The output is not expected as I got a segmentation fault and I think this happens because there are only 10 characters available but we try to input more then 10 with our combined strings.
+
+
+
+Assignment 3:
+
+1.)

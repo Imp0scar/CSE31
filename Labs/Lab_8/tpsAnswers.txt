@@ -1,0 +1,46 @@
+TPS 1
+
+	1.)
+
+	2.)
+
+	3.)
+
+	4.)
+
+	5.) We don't need to declare n in the data segment and we can get rid of la and lw for n.
+
+	6.)
+
+
+TPS 2
+
+	1.) As the name implies it is recursive so its going to output a lot of returns of either 1 or 3.
+
+	2.)
+
+	3.)
+
+	4.) We can put it inside of a temporary register like $t0 or $a0
+
+	5.) The returned value is always put into register $v0 or $v1 so we can put that value inside of a temporary register like $t0 or $a0 and then print out the value.
+
+	6.)
+
+	7.) There are 3 integer values reserved in this storage. The first thing to be stored on the stack would be the return address $ra. sw $ra, 8($sp)
+
+	8.) 
+
+	9.)
+
+	10.) we need to save $a0 into the stack because when the function recursion gets called again it changes the value in $a0, so we save it to not lose it.
+
+	11.) addi $a0, $a0, -2
+
+	12.) 
+
+	13.) addi $a0, $a0, -1
+
+	14.)
+
+	15.) we need to lw $ra to be able to go back to main.

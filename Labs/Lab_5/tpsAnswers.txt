@@ -1,0 +1,48 @@
+TPS 1
+
+1.) Mars stands for MIPS Assembler and Runtime Simulator.
+
+2.)
+
+3.)
+
+4.)
+
+5.) 
+
+	a. you load an assembly file by going into Mars going to the upper right clicking file and then open. You then select the assembly file you want to load.
+
+	b. You assemble/compile the program by clicking on the screwdriver and wrench icon.
+
+	c. You can run the assembled program by clicking on the green play button.
+
+	d. You can't run a program before assembling it.
+
+	e. If you want to run the assembled program line by line you would step through it with the green play button with a 1 next to it.
+
+	f.You can run the program again after it has finished by hitting the green reset button.
+
+
+6.)
+
+
+TPS 2
+
+1.) .data introduces the data (i.e. global variables) section of the program. .text introduces the text (i.e. code) instructions section of the program. .word tells the assembler to encode a 32-bit word at the location of the directive and you can attach a number to a variable for later use.
+
+2.) Line 10 uses the beq (branch on equal) command to compare $t3 and 0 and if they are equal then you continue instructions at finish.
+
+3.) Line 15 uses the j command which loads an immediate value into the PC register, so in this case it loads the instructions of fib.
+
+4.) You set a breakpoint in mars by going to the execute tab and then the text segment and checking off the line you want to add a breakpoint by clicking on the Bkpt box.
+
+5.) You can continue executing your code after a breakpoint stops it by hitting the step through icon.
+
+6.) You can find the content of a register by looking at the value of the register. You can manually change the value by double clicking the value and entering a new value.
+
+7.) n is stored in address 0x10000010. The 13th fib number would be 233.
+
+8.) The syscall is used to request a service from the kernel. For MIPS, the service number/code must be passed in $v0 and arguments are passed in a few of the other designated registers. so for line 18: 
+li 		$v0, 1. It is requesting to print integer service and syscall prints the fibonacci number.
+
+

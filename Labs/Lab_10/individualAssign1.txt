@@ -1,0 +1,19 @@
+
+	1.) My CPU has L1 Data, L1 Instruction, Level 2 and Level 3 in the cache.
+
+	2.) L1 Data: 8x32 KBytes (8-way)
+	 L1 Instruction: 8x32 KBytes (8-way)
+	 Level 2: 8 x 512 KBytes (8-way)
+	 Level 3 in the cache: 2 x 4 MBytes (16 way)
+
+	3.) The block size is 12 GBytes
+
+	4.) The caches are set associative, there are 3 that are 8-way and 1 that is 16-way.
+
+	5.) L1 data cache
+	32 Kbytes = 8 K words = 2^13 words = 2^13 blocks
+	block size = 4 bytes 
+	sets = blocks / 8 = (2^13) / 8 = 1024
+	tag bits: 32 - (10 + 2) = 20 bits
+	index bits: 10 bits because 2^10 = 1024  
+	offset bits: 2 bits because 2^2 = 4 bytes 
